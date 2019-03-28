@@ -80,6 +80,40 @@ function init ()
   document.addEventListener('mouseup', function (e) { stopControl(e); } );
   document.addEventListener('mousemove', function (e) { mouseMove(e); } );
 
+  // touch events
+  document.addEventListener('touchend', function (e) { stopControl(e); });
+
+  document.addEventListener('touchmove', function (e) {
+    if (e.targetTouches.length == 1) {
+      var touch = e.targetTouches[0];
+      mouseMove(touch);
+    }
+   });
+
+  document.getElementById('joystick').addEventListener('touchstart', function (e) {
+    e = e.touches[0];
+    mouseMove(e);
+    startJoystick(e);
+  });
+
+  document.getElementById('rudderSlider').addEventListener('touchstart', function (e) {
+    e = e.touches[0];
+    mouseMove(e);
+    startRudderSlider(e);
+  });
+
+  document.getElementById('flapSlider').addEventListener('touchstart', function (e) {
+    e = e.touches[0];
+    mouseMove(e);
+    startFlapSlider(e);
+  });
+
+  document.getElementById('canopySlider').addEventListener('touchstart', function (e) {
+    e = e.touches[0];
+    mouseMove(e);
+    startCanopySlider(e);
+  });
+
   resizeCanvas();
   load3D();
 
@@ -193,7 +227,7 @@ function toggleAnimation ()
 }
 
 function mouseMove (e) {
-   mouse.x = e.pageX; // - $('#my-container').offset().left;
+   mouse.x = e.pageX;
    mouse.y = e.pageY;
  }
 
