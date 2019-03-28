@@ -1,0 +1,35 @@
+body {
+  padding:0; margin:0;
+  overflow:hidden;
+  font-family: "Arial";
+}
+#my-container {
+  position:relative;
+  width:900px; height:600px;
+}
+
+#threejs-container {
+  position:absolute; left:250px; top:0px;
+  width:650px; height:600px;
+}
+
+
+#controls {
+  position:absolute; left:0; top:0;
+  width:250px; height:100%; background-color:#e2e2e2;
+}
+
+
+#joystick-container { position:relative; width:200px; height:200px; margin:25px; background-image:url('joystick.png'); }
+#joystick { position:absolute; left:80px; top:80px; width:40px; height:40px; background-color:#aaaaaa; }
+
+#rudderSlider-container { position:relative; width:200px; height:40px; margin:25px; background-color:#ffffff; }
+#rudderSlider { position:absolute; left:80px; top:0px; width:40px; height:40px; background-color:#772583; }
+
+#flapSlider-container { position:relative; width:200px; height:40px; margin:25px; background-color:#ffffff; }
+#flapSlider { position:absolute; left:0px; top:0px; width:40px; height:40px; background-color:#00C389; }
+
+#canopySlider-container { position:relative; width:200px; height:40px; margin:25px; background-color:#ffffff; }
+#canopySlider { position:absolute; left:0px; top:0px; width:40px; height:40px; background-color:#333333; }
+
+.button { width:200px; height:40px; margin:25px; background-color:#005eb8; color:#ffffff; font-size:20px; text-align:center; box-sizing:border-box; padding-top:10px; }
